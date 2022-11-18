@@ -38,6 +38,8 @@ Ubuntu 첫날은 이렇게 github 사용 방법을 공부하였다.
 
 # 2022-11-18
 
+github
+
 #용어정리
 
 ##git 
@@ -96,9 +98,9 @@ git pull은 getch+merge
 
 vagrant로 vm생성하기
 
-   1.vagtantfile 생성
+   1.vagtantfile 생성 (mkdir 파일명)
    2.os이미지다운로드및 vm설치
-      vagrant up
+      vagrant up : 생성
       1)로컬 vagrant에 보관되어있는 이미지가 있는지 찾아보기
          없으면 
          1)vagrantcloud.com 에서 vm이미지를다운로드
@@ -106,18 +108,55 @@ vagrant로 vm생성하기
       2)설정 파일에 등록된 대로 vm설정
       3)vm설치
 
+      ##실습 11월19일6시까지
+
 vm에 SSH로 접속 보안 터미널 암호화해서 데이터를 주고 받음
      
-      vagrant ssh : 현재 vm프로잭트가 생성하고 실행한 리눅스 서버에 접속
+      1)vagrant ssh : 현재 vm프로잭트가 생성하고 실행한 리눅스 서버에 접속
+      2)hostname : 으로 호스트명 확인 
+      
+      3)vagrant halt : 서버 전원끔
 
-      vagrant halt : 서버 전원끔
 
+vm에 서버이름 바꾸기
 
+      * host접속중일시 exit로 나온후 진행
+
+      1)vscode로 들어와 해당 vagrantfile에 config.vm.hostname = "myhost1.bitcamp" 를 추가 
+     
+      )서버가켜져 잇다면 끄고 이름을 바꾼다
+
+      
+      vagrant halt  
+
+      vagrant up  
+
+vm생성및 git 개인페이지 변경하기
+
+      1)centos5 vm 생성
+         -프로젝트 디렉토리 생성
+         -vagrantfile 준비
+         -vm 실행
+
+      2)centos5 vm 접속
+         -vm ssh접속
+            
+
+      3)git 개인페이지 변경
+         1)git 설치
+         2)nano 에디터 설치
+         3)git config 의 email과 name설정
+         4)git 개인페이지 저장소 복제
+         5)README.md 편집
+         6)git commit & push
+         
+   
+   
 
 
 
 mkdir vm-projects
-cd mv-projects
+cd vm-projects
 
 생성한 vagrantfile 에 vm 설정정보,호스트명 설치할os정보 네트워크 정보 등 
 
@@ -131,7 +170,9 @@ mkdir 파일 생성
 dir 파일 확인
 rmdir 파일 삭제
 exit 나가기
-
+pwd 현재 작업 위치
+rm (폴더명) 파일 지우기   
+rm -rf  파일을 뒤져가며 다 지워라
 
 
 
