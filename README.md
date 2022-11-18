@@ -1,22 +1,6 @@
 # 96abab.github.io
 
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="..." class="...">
-        <!-- 이 빈에 대한 추가적인 협력 객체나 설정은 여기에 작성함 -->
-    </bean>
-
-    <bean id="..." class="...">
-        <!-- 이 빈에 대한 추가적인 협력 객체나 설정은 여기에 작성함 -->
-    </bean>
-
-    <!-- 추가적인 빈 정의는 여기에 작성함 -->
-
-</beans>
  github 사용설명
 
 1.repository
