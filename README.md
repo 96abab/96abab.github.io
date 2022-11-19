@@ -1,4 +1,4 @@
-# 클라우드 OS(리눅스서버설)
+# 클라우드 OS(리눅스서버설치)
 =====================
 <details>
 <summary>click</summary>
@@ -11,7 +11,12 @@
 
 </div>
 </details>
-
+<style>
+      h1{
+         color:rgb(0, 7, 7);
+         font-size:30px
+       }
+</style>
 <hr/>
 # 2022-11-17
 
