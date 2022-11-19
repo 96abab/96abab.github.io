@@ -1,5 +1,6 @@
 # 클라우드 OS(리눅스서버설치)
 =====================
+
 <details>
 <summary># click</summary>
 <div markdown="1">
@@ -30,16 +31,16 @@
 <br>	 
   먼저 github에서  repository를 만들고 키를 부여 받는다 키는 한번 생성후 다시 보기 불가능 하니 안전한 곳에따로 저장해야한다. 사용 할 user의 pubilc template으로 접속후 명령 프롬프트에서 자신의 cd <아이디>.github.io 로 들어가서 git add .
 
-  git clone https: 원하는 reposistoy 주소  를 입력하고 git pull 로 정보를 당겨온다 그리고 repository.io에 정보를 복사하여 자신의 repository.io파일에 붙여넣어 수정하여 사용한다.<br>
+  git clone https: 원하는 reposistoy 주소  를 입력하고 git pull 로 정보를 당겨온다 그리고 repository.io에 정보를 복사하여 자신의 repository.io파일에 붙여넣어 수정하여 사용한다.
 	내용을 변경후 git add . 후 git commit -m "수정내용" 을 입력 하면 수정내용을 표시한 파일이 commit된다 만약 "[origin/main]" 이라는 문구가 보이면서 수정내용이 적용되지 않는다면 다음 사항을 체크해보자
-
-
-  	1. Save 하여 해당파일이 노란색으로 적용 됬는지
-	2.vmwaer 를 껏다키고 save 해보기
-	3.내 repository.io안에 해당파일이 겹치는지   
+<dr>
+    
+    1.Save 하여 해당파일이 노란색으로 적용 됬는지
+    2.vmwaer 를 껏다키고 save 해보기
+    3.내 repository.io안에 해당파일이 겹치는지   
 
   
-위 사항을 체크해보고 문제가 해결되지 않는다면 [google](https://google.com) 에서 방법을 찾아보자
+위 사항을 체크해보고 문제가 해결되지 않는다면 [![](https://www.google.com/logos/doodles/2022/2022-world-cup-opening-day-6753651837109999.2-s.png)](https://www.google.com/) 에서 방법을 찾아보자
 ​<br>
 <br>  
 
@@ -186,5 +187,7 @@ cd .. 상위 폴더로 이동
 git fetch 로 변경내용 다운  
 git merge 기존내용과 다운내용을 합친다  
 git pull은 getch+merge  
+ls 파일목록  
+
 
  
