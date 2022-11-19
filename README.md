@@ -1,7 +1,7 @@
 # 클라우드 OS(리눅스서버설)
 =====================
 <details>
-<summary>date</summary>
+<summary>click</summary>
 <div markdown="1">
 
 
