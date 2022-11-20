@@ -158,7 +158,7 @@ vm생성및 git 개인페이지 변경하기
 
 <hr>
  
- ![hypervisor hypervisor이미지화](https://github.com/96abab/96abab.github.io/blob/main/day/HYPERVISOR4.jpg?raw=true "hypervisor이미지")  
+ ![hypervisor hypervisor이미지화](https://github.com/96abab/96abab.github.io/blob/main/test/HYPERVISOR4.jpg?raw=true "hypervisor이미지")  
 
 ##하이퍼바이저  
  H/W를 가상화 하여 hostOS가 여러 guestOS 를 컨트롤 할 수 있게 도움을 주는 소프트웨어
