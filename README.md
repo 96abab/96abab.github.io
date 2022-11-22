@@ -186,26 +186,26 @@ cd .. 상위 폴더로 이동
 git fetch 로 변경내용 다운  
 git merge 기존내용과 다운내용을 합친다  
 git pull은 getch+merge  
-<br/>
+<hr/>
 
-<br/>
-
+<hr>
 # 2022-11-21 
-
+<br>
 ##root<br>
 권한자로그인 모든 권한을 가지고 있으므로 조심해서 사용해야한다 다른 host 계정에도 영향을 미친다 추가적으로 root권한은 리눅스와 우분투에서 약간의 차이가 있다
 <br>
 <br>
 - 리눅스<br>
   서버를 주로 다루다보니 서버위주의 권한부여<br>
- 
+<br>
 - 우분투<br>
    host위주로 권한 부여<br>
 <br>
 <br>
 ##HOST OS (우분투)
-<br>  
+<br>
 내가 지정한 centos1 폴더 (vagrant project: 가상화머신을 만들고 초기화 시키는 설정 정보가 들어있는 프로젝트)
+<br>
 <br>
   -vagrant innit 하면 vagrantfile생성 (vagrant project: 가상화머신을 만들고 초기화 시키는 설정 정보가 들어있는 프로젝트)<br>
   vagrantfile: 설정을 조정하는 파일
@@ -219,8 +219,10 @@ git pull은 getch+merge
 ##CVS(중앙집중)<br>
 파일을 서버와 checkin(스냅샷)과 checkout으로 주고 받는다 
 <br>
+<br>
 -sever<br>
 나의 repo. 프로젝트 파일들과 변경내용
+<br>
 <br>
 -local<br>
 내프로젝트 파일 최신 버전을 sever에서 주고받음
@@ -229,8 +231,10 @@ git pull은 getch+merge
 ##SVN(중앙집중)<br>
 변경내용만 주고 받음
 <br>
+<br>
 ##GIT(분산) <br>
 저장소를 클라이언트 쪽에 분산 복제 하여 서버에 문제가 발생 해도 클라이언트쪽 복제된 repo.로 복구 가능해 안정적이다
+<br>
 <br>
 변경 내용을 다른사람과 공유하고 싶다면 push 한다 따라서 sp트워크 overhead가 적다 
 <br>
@@ -243,6 +247,7 @@ local repo.에서 파일을 꺼내 working directory 에서 다음과 같이 저
   staged<br>
   변경한 내용을 저장하고 보낸 상태<br>
 <br>  
+<br>
 git directory 저장소는 repo.에 .git 를 가리키고 git client가 관리하고 사용자가 변경하면 안되며 여기에 변경내역을 저장한다<br>
 <br>
 working directory는 .git 밖에 있는 파일들을 가리키고 이 파일들을 수정하여 commit하면 git directory에 적용된다  
@@ -262,16 +267,18 @@ working directory는 .git 밖에 있는 파일들을 가리키고 이 파일들�
   - git add 파일명 을 입력하면 ??가 A_로 바뀐다 그러면 스테이징 에리어에 추가된 상태 이상태로 git commit 을 하면 스테이지에 있는 파일들을 올린다 <br> 
     git commit 한 파일을 다시 수정하면 _M 으로 바뀐다 그리고 git  하면 1 A 인 파일들만 올라간다 
   - git commit 
-
+<br>
 <br> 
 -repo. 저장소는 변경 내역을 관리하는 기본 트랙이 있다 그것을 "main" 
 <br>
 
 ##commit hash (값) -> 각 commit을 구분하기 위한 식별자 hash알고리즘
 <br>
+<br>
 ##데이터 비교
 <br>
  같은 데이터 인지 하나씩 비교 크기가 커질수록 비교하는 횟수가 늘어 속도가 느려진다 하지만 hash알고리즘(MD4,MD5,SHA-1,SHA-256,SHA-512....)을 이용해서 비교 횟수를 줄여 속도를 높이고 그과정에서 나온 hash값을 데이터를 식별하는 '디지털 지문' 이라고 한다.
+<br>
 <br>
 ###hash알고리즘 값 (디지털 지문) 사용예
 <br>
@@ -289,11 +296,13 @@ commit 했을때 내용을 변경할 수 없다 파일에 모든 변경된 내�
 git remote add origin
 <br>
 *git log --oneline<br>
-commit한 파일의 hash코드와 -m에 적은 메시지가 나온다
+commit한 파일의 hash코드와 -m에 적은 메시지가 나온다<br>
 *git log --oneline --graph --all<br>
 <br>
 과제 로컬 git 저장소를 만들고 github.com 개인 저장소와 연결하기
 <br>
+<br>
+<vr>
 @@과제 목표<br>
 작업내용: (host1 리눅스 VM에서 작업을 수행한다.)
 <br>
@@ -339,12 +348,182 @@ commit한 파일의 hash코드와 -m에 적은 메시지가 나온다
     Username for 'https://github.com': 96abab <br>
     Password for 'https://96abab@github.com':<br>
 <br>
+<hr>
+<hr>
+<br>
+# 2022-11-22
+<br>
+*file (파일명)  파일 종류 확인<br>
+*less ()  내용 확인<br>
+*touch ()  파일 생성<br>
+*rm ()  파일 삭제<br>
+*rm -rf ()  -rf 는 하위 파일확인하며 삭제<br>
+*rm *() 지정한 파일 전부삭제<br>
+*git checkout 파일명 해당파일을 변경전으로 돌림 (add상태라면 add전으로 돌릴수는 없다)<br>
+*cat () 파일 변경 내용 확인<br>
+*git log --oneline --graph --all 로그 확인<br>
+*git branch () 브랜치생성<br>
+*git branch  브랜치확인<br>
+*git checkout  HEAD가 가리키는 최신 작업 디렉토리에서 내용을 꺼낸다<br>
+*git log --oneline  로컬의 작업내용을 확인
+*git ls-remote 서버 저장소 이름을 확인가능 
+<br>
+<br>
 
+    drwxrwxr-x. 2 vagrant vagrant  23 Nov 21 12:09 .   상위폴더
+    drwxrwxr-x. 4 vagrant vagrant 107 Nov 21 12:08 ..
+    -rw-rw-r--. 1 vagrant vagrant   0 Nov 21 12:09 hello.txt   파일
+    now 앞에있는 번호는 바이트고 담고있는 정보들의 링크다
+<br>
+디렉토리는 자신에게 소속된 파일들에 링크다
+<br>
+<br>
+#centos업데이트 하고 설치와 버전확인
+<br>
+    *sudo yum install http://opensource.wandisco.com/centos/7/git/x86_64/*wandisco-git-release-7-1.noarch.rpm   centos 업데이트<br>
+    *sudo yum remove git<br>
+    *sudo yum install git -y<br>
+    *git --version<br>
+<br>
+<br>
+###add를 한 내용을 그 전으로 돌리는 방법
+<br>
+    *git reset HEAD (파일명) : 스테이지드(add) 상태를 취소시킨다 
+    *git checkout () : 편집한 상태를 편집전으로 바꾼다
+    *git status --short : 내용 확인
+<br>
+<br>
+*git remote -v : 연결된 저장소 확인
+<br>
+  origin  https://github.com/96abab/bitcamp-nap.git (fetch)
+  origin  https://github.com/96abab/bitcamp-nap.git (push)
+<br>
+<br>
 
+[vagrant@host1 bitcamp-ncp]$ git log --oneline --graph --all<br>
+* e8ed661 (HEAD -> main) 11<br>
+*   42da029 (origin/main) Merge branch 'main' of https://github.com/96abab/bitcamp-nap into main
+<br>
+    |\
+    | * 69e6815 Initial commit
+    * a363768 7
+    * 208e9d9 6
+    * 8cc5dc7 5
+    * 08b3480 4
+    * 016b6be 3
+    * 29afa77 2
+    * 2b0932c 1
+<br>
+<br>
+### 2개의 local에서 작업한것을 수정하고 패치하기<br>
+git pull<br>
+서버에서 버전을 받아오고 합친다
+<br>
+  git fetch
+  버전만 받아온다 merge를 하면 합쳐진다 git merge중 서버와 차이가 있다면 어떤 내용을 합칠지 내용을 수정할 수 있다 아래와 같이 로컬쪽 내용이 서버보다 번호가 높다면 push해서 서버쪽으로 보내고 다른쪽 로컬에 사용시 pull로 서버와 동일하게 바꿔줘야한다.
 
+    *   89358da (HEAD -> main) 21     ## 로컬쪽
+    |\
+    | * 31eead5 (origin/main, origin/HEAD) 18     ##서버쪽
+    | * 992b641 17
+    * | 1855261 20
+    * | c1b2208 19
+<br>
+<br>
+## 충돌시
+<br> 
+서버쪽 파일 내용이 변하고 로컬쪽 내용도 변햇다면 두개 내용을 어떻게 할지 내가 수정해야한다 <br>
+<br>
+<br>
+pull<br>
+add<br>
+commit<br>
+merge<br>
+nano (해당파일)<br>
+<br>
+<br>
+-내용수정
+    <<<<<<< HEAD
+    host2 => yyy
+    =======
+    host1 =>xxx
+<br>
+<br>
+#HEAD <br>
+현재 작업 브랜치를 가리킨다
+<br>
+<br>
+*git branch
+<br>
+    b1
+  * main   (HEAD) 
+<br>
+#git checkout () 으로 브런치를 바꿔 여러 브런치들 작업을 할 수 있다
+<br>
+  예) main <a,b,f> , b <s,d,f> 등 작업파일,내용 도 해당 브런치로 불러옴
 
+  -git merge b 했을때 main에는 수정 사항이 존재하지 않지만 b에는 수정사항이 존재할때 main에 합친다  
+<br>
+<br>
+# 팀 branch git 작업순서
+<br>
+<br>
+    1.서버에서 clone 
+    2.local에 pull
+    3.branch를 만들어서 작업
+    -git checkout
+    4.main과 merge 
+    5.서버에서 pull 
+    6.main과 merge
+    7.서버로 push 
+    8.마지막 branch 삭제한다 
+<br>
+<br>
+# 브랜치 설정 정보를 조회
+    [vagrant@host1 bitcamp-ncp]$ git branch -vv
+    * main 218db7b [origin/main] merge
+<br>
+협업<br> 
+서버에서 repo. 를 만들고 seting
+<br>
+팀 프로젝트 용 GIT 저장소를 생성한 후 작업 지시에 따라 커밋 스냅샷을 구성하시오.
+<br>
+작업 내용
+<br>
+1) 팀을 구성한다.
+<br>
+2) 팀원 중 한 명이 github 사이트에 팀 프로젝트 용 깃 저장소를 생성한다.<br>
+<br>
+     깃 저장소 이름: bitcamp-test
+<br>
+3) 깃 저장소를 다른 팀원들이 쓸 수 있도록 협력자(Collaborator)로 등록한다.
+<br>
+4) 각 팀원은 팀 프로젝트용으로 만든 깃 저장소를 로컬로 clone 한다.
+<br>
+5) 각 팀원은 브랜치를 생성한 후 임의의 파일 생성, 변경, 삭제 작업을 진행한다.
+<br>
+6) 각 팀원은 브랜치에서 작업한 내용을 최소 3번 이상 커밋을 수행한다.
+<br>
+7) 각 팀원은 브랜치로 작업한 내용을 로컬 main 브랜치에 병합한다.
+<br>
+8) 각 팀원은 로컬 main 브랜치의 커밋 내용을 팀 공유 서버 저장소에 push 한다.
+<br>
+    - push 하다가 충돌 발생 시, 충돌 내용을 로컬에 병합한 후 서버 저장소에 올려야 한다.
 
-gitignore.io 사이트<br>
+ 
+<br>
+[과제 제출 내용]
+<br>
+1) 수강생 깃 이름: 
+<br>
+2) 팀 공유 깃 저장소 URL: 
+<br>
+<br>
+*** 과제중 발생한 문제 
+-서버 저장소에서 pull 할 수 없었던 문제
+누군가 올린 파일중 확장자명이 보이지 않는 이상한 파일이 있었다
+이 파일이 main branch와 문제가 생겨서 발생한 문제이다 해당 파일을 github repo.로 가서 삭제하여 문제를 해결하였다 
+<hr>
 
-
-[def]: https://google.com
+<hr>
+ [def]: https://google.com
