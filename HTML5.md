@@ -191,6 +191,10 @@ HTML,CSS,JAVAscript  framework(vue.js)
 <br>
 ##알아보기<br>
 meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+        meta ivewport태그
+        
+        -애플,아이폰,아이패드등 모바일 브라우저의 뷰포트를 크기 조절하기 위한 태그 w3c에 표준이 아니지만 IOS장치가 널리 사용되면서 사실상 표준처럼 사용되고있다 
 <br>
 <br>
 ##data 와 메모리

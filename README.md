@@ -5,7 +5,7 @@
 <div markdown="1">
 
 
-  1. [리눅스 명령어 정리](aa.md)
+  1. [리눅스 명령어 정리](linux.md)
 
   2. [HTML수업](HTML5.md)
 
