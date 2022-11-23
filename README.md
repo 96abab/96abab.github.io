@@ -5,9 +5,9 @@
 <div markdown="1">
 
 
+  1. [리눅스 명령어 정리](linux.md)
 
-|[2일차](https://github.com/96abab/96abab.github.io/tree/main/day/2일차.md)|
-
+  2. [HTML수업](HTML5.md)
 
 </div>
 </details>
@@ -512,7 +512,6 @@ nano (해당파일)<br>
 <br>
     - push 하다가 충돌 발생 시, 충돌 내용을 로컬에 병합한 후 서버 저장소에 올려야 한다.
 
- 
 <br>
 [과제 제출 내용]
 <br>
@@ -528,4 +527,8 @@ nano (해당파일)<br>
 <hr>
 
 <hr>
+
+
+![aa.md](C:\Users\bitcamp\git\96abab.github.io\aa.md)
+
  [def]: https://google.com
