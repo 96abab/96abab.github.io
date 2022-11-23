@@ -108,3 +108,106 @@ web app 제작기술
         
         SM(유지보수)/SI(시스템통합)
 
+#HTML 기본구조
+<br>
+
+    <!DOCTYPE html> <- root엘리먼트
+
+    엘리먼트(
+    <html lang="en">  <-시작태그
+    콘텐트(
+        <head>  <- html의 자식 엘리먼트
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+    <body>
+
+    </body>)
+    </html>)
+
+        시작태그와 끝태그를 사용
+        <a></a>
+        <P></P>
+        <br><br>
+        
+        끝태그를 안써도 가능
+        <br>
+        <meta>
+
+##HTML4 의 doctype
+
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+        
+        -위 해석
+        루트엘리먼트 
+        HTML
+        
+        문서의 규칙의 공개여부 
+        PUBLIC
+       
+        공인시설 
+        +-
+        
+        규칙을 만든 조직의 이름
+        w3
+        
+        문서규칙 식별자 
+        DTD
+        
+        문서규칙의 이름 
+        HTML
+        
+        규칙의 언어 
+        EN
+        
+        문서규칙을 정의한 DTD파일의URL  
+        http://www.w3.org/TR/html4/strict.dtd
+        
+        DTD 는 old
+        schema new
+
+
+<br>
+##XHTML은 끝태그 필수
+<br>
+<br>
+##웹 퍼블리셔<br>
+HTML,CSS,JAVAscript 을 활용한 단순 웹화면구성 
+<br>
+##FRONT-END<br>
+HTML,CSS,JAVAscript  framework(vue.js)
+<br>
+##HTML 공부법
+<br>
+
+1. 예제 실행 따라해서 
+2. 결과화면 확인
+3. 태그 기능이해
+4. 태그 경험해보기  
+
+<br>
+##알아보기<br>
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+<br>
+<br>
+##data 와 메모리
+<br> 
+bit에는 전기를 데이터로 바꿔 저장한다 이것을 사람은 0과1로 표현한다.
+<br>
+<br>
+#data 저장
+<br> 
+양수: 10진수->2진수 규칙을 그대로 적용 
+        
+    메모리 상태와 2진수 , 10진수 ,16진수
+
+10진수를 2진수로 바꾸려면 힘들다 그래서 16진수로 표현하면 쉽다 
+<br>
+메모리상태를 직접적으로 보고싶다면 2진수<br>
+문서의 간략히 적고 싶다면 16진수 
+<br>
+##UTF-8<br>
+문자를 2진수로 표현하는 방식 중 하나

@@ -9,7 +9,6 @@
 
   2. [HTML수업](HTML5.md)
 
-<link rel="stylesheet" href="https://github.com/96abab/96abab.github.io-test/stylesheet.css">
 </div>
 </details>
 
