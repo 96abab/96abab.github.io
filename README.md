@@ -3,12 +3,12 @@
 <details>
 <summary>click</summary>
 <div markdown="1">
-  <ol>
 
-  [리눅스 명령어 정리](aa.md)
-  [HTML수업](HTML5.md)
 
-<ol>
+  1. [리눅스 명령어 정리](aa.md)
+
+  2. [HTML수업](HTML5.md)
+
 
 
 </div>
