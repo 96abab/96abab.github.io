@@ -4,7 +4,7 @@
 <summary>click</summary>
 <div markdown="1">
 
-![리눅스 명령어 정리](aa.md)
+[리눅스 명령어 정리](aa.md)
 
 |[2일차](https://github.com/96abab/96abab.github.io/tree/main/day/2일차.md)|
 
