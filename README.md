@@ -3,9 +3,12 @@
 <details>
 <summary>click</summary>
 <div markdown="1">
+  <ol>
 
-[리눅스 명령어 정리](aa.md)
-[HTML수업](HTML5.md)
+  [리눅스 명령어 정리](aa.md)
+  [HTML수업](HTML5.md)
+
+<ol>
 
 
 </div>
@@ -527,12 +530,6 @@ nano (해당파일)<br>
 
 <hr>
 
-# 2022-11-23
-
-HTML5
-<hr>
-
-<hr>
 
 ![aa.md](C:\Users\bitcamp\git\96abab.github.io\aa.md)
 
