@@ -529,6 +529,4 @@ nano (해당파일)<br>
 <hr>
 
 
-![aa.md](C:\Users\bitcamp\git\96abab.github.io\aa.md)
-
  [def]: https://google.com
