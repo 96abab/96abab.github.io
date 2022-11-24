@@ -367,4 +367,227 @@ bit에는 전기를 데이터로 바꿔 저장한다 이것을 사람은 0과1�
         ff                //                 //
 
         -빛의 밝기
+
+##encoding
+
+-문자를 문자코드로 2진수를 이용해 변환 하는것을 encoding(코드화 하다)이라고 한다 
+
+-코드를 다른형식으로 변환 하는것도 encoding (예) 압축,암호화) 이라 부른다 
+이를 되돌리는것을 decoding (예) 압축풀기 , 복호화)
+
+        -URL encoding /decoding  =  percent encoding /decoding
+        url에서 특수 목적(예약어)으로 사용하는 문자 를 reserved keyword 라고한다 
+        데이터를 표현하는 용도로 사용할 수 없다 특정 형식에 맞게 변환해야한다
+
+
+        예약어 와 비예약어
+        -예약어는 변환해야하는 문자 비예약어는 변화할 필요가 없는 문자 
+
+        encoding 예) 
+                  (!) -> (%21) 
+         16진수로  (21)    (25 32 31)
                 
+                (+) -> (%2B)
+                (2B)     (25 33 46)
+
+                (space) -> (+)
+                (20)       (2B)
+
+                '가' -> % EA % BO % 80
+                (EA 30 30)    (25 45 41 25 42 45 25 38 30)
+        
+        숫자2는 2 의 보수  -> 0000 0010
+        문자 "2" 는 ISO-8859-1 -> 0011 0010
+
+        urldecoding 
+
+        데이터를 입력하면 webbrowser가 자동으로 urlencoding을 수행 하여 webserver에서 자동으로 urldecoding 수행
+
+##영상 data와 인코딩/디코딩
+
+        인코딩
+
+        -영상 데이터가 너무 커서 특별한 수학공식 알고리즘을 통해 압축하여 mp3.mp4.avi로 만든다 
+
+        디코딩
+
+        -mp3,avi등을 소리와 영상으로 되돌리는 것 
+
+
+        영상을 주고 받을때 인코딩 기능과 디코딩 기능이 있어야한다
+
+#web 기술
+ - html 사용
+
+        <title>
+        <h1>
+        <p>
+        <style>
+        <hr>  수평선
+        <br>  
+        <b>
+        <i>
+        <small>
+        <sub>
+        <sup>
+        <ins>
+        <img src="Penguins.jpg" alt="펭귄" width="300" />
+        <img src="" alt="그림이 존재하지 않습니다." width="300" />
+        src= 파일이 내부에 있을때 파일명만, alt= 시각장애인을 위한 기능 
+        <ruby>
+        <span>大韓民國</span>
+        <rt>대한민국</rt>
+        </ruby>
+        <audio>
+        <video poster>
+        <oi>
+        <li>
+        <ul>
+        <dt>
+        <dd>
+        <dl>
+        <th>
+        <colgroup>
+        <caption>
+        <table>
+        <th>
+        <tr>
+        <td>
+        <input type="text" name="search" />
+        <input type="radio" name="cf" />짜장면<br /> 여러가지 사용시 이름을 통일시켜 하나만 선택할수 있게 한다 기본 선택으로 하고싶다면 checkde를 넣어주면 가능하다
+        <label for="username">이름</label>
+        <input type="text" id="title"/>
+        <input type="text" id="username" />
+        <input type="color" /><br />
+        <input type="date" /><br />
+        <input type="datetime" /><br />
+        <input type="datetime-local" /><br />
+        <input type="email" /><br />
+        <input type="month" /><br />
+        <input type="number" /><br />
+        <input type="range" /><br />
+        <input type="search" /><br />
+        <input type="tel" /><br />
+        <input type="time" /><br />
+        <input type="url" /><br />
+        <input type="week" />
+        <input type="submit">
+        <input type="text" value="coco">
+        <textarea>............</textarea>
+        <select multiple size="5">
+        <option>김밥</option>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        </select>
+        <optgroup label="CSS3">
+        <option>Animation</option>
+        <option>3D Transform</option>
+
+
+
+        https://via.placeholder.com/300x200  더미 이미지 
+
+        controls,selected,checked,readonly
+        -속성중 값에 상관없이 존재 유무로 기능을 수행하는 속성이 있다
+
+##CR/LF -> line feed
+
+carrage return
+-예전에 타자기에서 줄 바꾸는 것을 모방하여 만든 코드 값
+
+        CR->0x0D
+        LF->0c0A
+
+        windowsOS-> 줄바꿈을 표시할때 CRLE 2byte 를 붙인다
+        linux ->                      LF 1byte만 사용한다
+
+
+##tag 와 attribute
+
+  <a href=""> </a>
+     
+
+##CSS
+
+        1. <style> 태그  
+
+        <style>
+        .
+        .
+        .
+        </style>
+
+        2. inline 스타일
+
+        <tfoot style="CSS코드넣기">..<tfoot>
+                ㄴ(inline style)
+
+        
+        3. 외부 css파일 
+
+        외부html 파일에서 css내용 공유
+
+##MIME TYPE
+
+        multi-purpose
+        internet
+        mail
+        Extensions
+
+        메일에 첨부한 콘텐트가 어떤 형식인지 상대편에게 알려주는 용도
+        -> 현재는 메일뿐 아니라 웹등 여러 곳에서 사용
+
+<hr>
+
+#시맨틱 태그의 목적과 주요 시맨틱 태그의 용도를 기술하시오.
+과제 목표
+
+        1. 시맨틱 태그의 목적?
+
+                -HTML5 이전에는 구조를 구분하기 위하여 div태그에 id 또는 클래스 등으로 구분하며 구조를 설계했으나
+                인터넷이 발전하면서 웹문서의 양이 많아지고 각자 생성 양식이 달라 원하는 문서를 찾기 점점 힘들어지게 되었다
+                
+                div 태그와 같이 block element이면서 사이트의 구조를 설계하고 태그에 의미를 부여 하여 사이트의 구조를 파악하
+                기 편하게 만들어주어 좀더 명시적이고 직관적으로 설계할 수 있다 
+        
+        
+        - SEO 최적화에 유리 (SEO: Search Engine Optimization)
+
+                검색 엔진이 태그 목적에 알맞게 설계되어있는 구조의 사이트에서 더욱 빠르고 효율적으로 정보를 파악할 수 있고 검색결과가 
+                검색 엔진이 태그의 목적에 부합하게 설계되어있는 구조의 사이트에서 더욱 빨리 효율적으로 정보를 파악할 수 있어
+                검색 결과의 노출에 유리할 수 있게 해준다.
+
+        - 웹 접근성에 효율적
+
+                일반적인 브라우저에서는 차이가 없지만 스크린리더 시각장애인을 위한 웹 서핑
+                프로그램 과 같은 환경에서는 웹 접근성과 사용성을 향상시켜준다.
+
+        
+        - 유지보수의 용이성
+
+                많은 수의 div사용으로 관리가 어려워지는 문제점에서 벗어나 태그의 이름만 보고도 어떤 영역인지 바로 확인이 가능하고 해당 태그 영역의 특성에 맞는 작업을 구분하여 진행하기에 용이하다.
+        
+
+        2. 시맨틱 태그의 용도를 간단히 기술하시오?
+
+                header 
+                -머리글,제목,헤더
+                
+                main
+                -이름처럼 문서 body의 중심 주제,주요 내용 또는 응용 프로그램의 중심 기능과 관련되어나 확장되는 콘텐츠를 나타낸다
+                
+                footer
+                -바닥글,문서 하단에 들어가는 정보 구분 공간을 표현하는 태그
+                
+                nav 
+                -네이게이션,목차,리스트 등 다른 페이지로의 이동을 위한 링크 공간을 위주로 표현
+                
+                section
+                - 주제,카테고리 별로 섹션을 구분하는 용도의 태그로 주로 사용 같은 테마를 가진 여러개의 콘텐츠의 그룹화
+                
+                article
+                - 기사,블로그 등 텍스트 위주의 페이지를 구성할때 주로 사용
+                
+                aside
+                -좌측과 우측 사이드 위치의 공간을 의미하며,본문 외에 부수적인 내용을 주로 표현하는 태그이다

@@ -529,9 +529,4 @@ nano (해당파일)<br>
 <hr>
 
 
-<<<<<<< HEAD
-![aa.md](C:\Users\bitcamp\git\96abab.github.io\aa.md)
-
-=======
->>>>>>> 5f26e58a6fdd57bbb2b6a70a65e7a45b1b54b2ce
  [def]: https://google.com
