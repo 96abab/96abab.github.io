@@ -1,4 +1,20 @@
 # HTML5 수업
+=====================
+<details>
+<summary>click</summary>
+<div markdown="1">
+
+
+  1. [리눅스 명령어 정리](linux.md)
+
+  2. [HTML수업](HTML5.md)
+
+  3. [CSS수업](CSS.md)
+
+</div>
+</details>
+
+<hr/>
 
 
 # 2022-11-23
@@ -689,8 +705,8 @@ exam-01에서 서버요청과 응답을 확인할 수 있는 charles 라는 프�
 
         get 요청
 
-        ET /html/form/exam02?name=&age=111 HTTP/1.1
-                                쿼리스트링 (name=-- & age=111)
+         ET /html/form/exam02?name=&age=111 HTTP/1.1
+                              ㄴ>쿼리스트링 (name=-- & age=111)
                                 name : 파라미터명
                                 -- : 파라미터값
                                 & : 파라미터 구분자
@@ -703,9 +719,61 @@ exam-01에서 서버요청과 응답을 확인할 수 있는 charles 라는 프�
                                         예) txt.rtf,html,cdd,js,xhtml.. ..
                                 2. binary
                                 -byte단위로 포맷 
-                                -일반텍스트로 편집 불가 
-                                -전용 app 사용
-                                예) jpg,mp3,mp4
+                                -일반텍스트로 편집 불가        -> base64 
+                                -전용 app 사용                    binary 데이터를 텍스트로변경가능
+                                예) jpg,mp3,mp4 포맷이 깨진다 
+
+                                즉 저장된 형식에 맞춰 읽어야한다 
+
+                                3. URI 크기의 제한 떄문에 대용량 데이터를 보낼 수 없다 보통 64k apache는 8k
+
+                                4. URL은 브라우저 캐시에 보관 되어 보안에 취약하다 
+        
+
+        post 요청
+
+
+        POST /html/form/exam02 HTTP/1.1     <- request line      post부터 Connection까지 구역이 header   
+        Host: 192.168.0.10:5500                     
+        Content-Length: 18          <-   이것과 Content-Type 는 post방식에만 있는 header
+        Cache-Control: max-age=0
+        Upgrade-Insecure-Requests: 1
+        Origin: http://192.168.0.10:5500
+        Content-Type: application/x-www-form-urlencoded
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+        Referer: http://192.168.0.10:5500/git/bitcamp-nap/form/exam-02.html
+        Accept-Encoding: gzip, deflate
+        Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+        Connection: keep-alive  
+
+        name=asdfsadf&age=                <-    message-body
+
+        
+        
+        post 요청 특징
+        
+        1. binary 데이터 전송가능
+        2. URL에 노출안됨     -> URL 데이터에 포함해야하는 방식에 적합하지 않음 예)검색URL,게시글 조회 URL
+        3. 여러개의 파일 첨부가능
+        4. 용량제한없다 (서버에서 제한 하지 않는한)
+
+
+##post와get방식은 input안에 name을 지정하지 않으면 
+데이터를 서버에 보내지 않는다. 
+
+enctype="multipart/form-data" 으로 하면 이름과 데이터                         
+
+사진: input type="file" name="photo" multiple
+여러 사진을 넣고싶다면 multiple을 추가해준다 
+
+#주말동안
+
+9-1
+9-2
+9-3은 빼고
+10-1
+깃허브에 html로 정리 와 css 테마 조정하기 index.html로 md옮겨서
 
 
 
