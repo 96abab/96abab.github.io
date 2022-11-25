@@ -591,3 +591,123 @@ carrage return
                 
                 aside
                 -좌측과 우측 사이드 위치의 공간을 의미하며,본문 외에 부수적인 내용을 주로 표현하는 태그이다
+
+<hr>
+
+# 2022-11-25
+
+##HTTP
+
+webbrowser 가   webserver에 요청 
+
+request line GET(method) / -(url)/a.html HTTP(protocol)/1.1
+
+        | "GET"                    ; Section 9.3
+        | "HEAD"                   ; Section 9.4
+        | "POST"                   ; Section 9.5
+        | "PUT"                    ; Section 9.6
+        | "DELETE"                 ; Section 9.7
+
+URI (uniform resource identifier)
+
+        -URL(Uniform Resource Locator)
+        http://img.naver.net/static/www/dl_qr_naver.png
+        
+        -URN(uniform resource name)
+        urn:ietf:rfc:2141 - 'RFC 2141' 문서
+
+##네트워킹  
+
+        1. concection- oritented (연결지향) 연결후 통신 
+        예)전화
+        
+        - TCP : 연결확인 과정중 3번의 연결을 과정을 통해 데이터 전송 신뢰성 확보 단점은 그 과정에서 지연시간이 발생
+           HTTP1,2
+
+                1)stateful -> client와 server가 연결과 요청 응답을 연결 끊길때까지 반복한다 
+                
+                - 한번연결후 끊을때까지 여러번 통신
+                - 적은 수의 client 대응
+                - 쓰레드 방식으로 여러 client를 대응할 수 있다
+                - SSH,FTP,채팅,구글미트
+
+                2)stateless -> client와 server가 연결과 요청 응답을 하고 연결을 끊는다 
+                
+                - 매번연결
+                - 많은 수의 client와 대응 가능
+                - HTTP 
+
+        2. concectionless (비연결) 연결없이 데이터 전송 
+        예)편지,방송
+        편지는 특정 주소에
+        방송은 특정 그룹에  
+        - UDP :  데이터 전송 신뢰성 없다 -> 별도 처리 필요
+          HTTP3
+
+        *추천 참고 도서 : 모두의 네트워크
+
+
+##proxy 서버
+client와 server 중간에서 통신을 중재
+
+-요청을 server에 보내면 proxy cache에 응답 데이터를 임시저장시켜 같은 자원을 요청할때 보관된 데이터를 즉시 전달하여 네트워크 오버헤드를 줄이고 응답속도를 개선한다 
+
+-모니터링을통해 요청/응답내용을 감시하여 보안강화 
+http 통신을 살펴볼 수 있다
+
+exam-01에서 서버요청과 응답을 확인할 수 있는 charles 라는 프로그램을 다운로드 받고 CMD에서 ipconfig로 아이피 확인 후 입력하여 charles로 확인 가능
+
+** charles에 내용이 나오지 않을 경우 proxy서버를 수동으로 끄고 켜서 설정해야 한다
+
+        서버
+
+        GET /git/bitcamp-nap/form/exam-01.html HTTP/1.1
+        Host: 192.168.0.10:5500
+        Upgrade-Insecure-Requests: 1
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+        Accept-Encoding: gzip, deflate
+        Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7      *요청언어를 설정
+        Connection: keep-alive
+
+        
+        클라이언트
+
+        HTTP/1.1 200 OK
+        Vary: Origin
+        Access-Control-Allow-Credentials: true
+        Accept-Ranges: bytes
+        Cache-Control: public, max-age=0
+        Last-Modified: Fri, 18 Nov 2022 07:21:33 GMT
+        ETag: W/"2ed-184899d3929"
+        Content-Type: text/html; charset=UTF-8             *mainprotocol type
+        Content-Length: 2242
+        Date: Fri, 25 Nov 2022 02:51:45 GMT
+        Keep-Alive: timeout=5
+        Proxy-Connection: keep-alive
+
+
+        get 요청
+
+        ET /html/form/exam02?name=&age=111 HTTP/1.1
+                                쿼리스트링 (name=-- & age=111)
+                                name : 파라미터명
+                                -- : 파라미터값
+                                & : 파라미터 구분자
+                                data를 url에 붙여서 보낸다 서버에 보내는 데이터
+
+                                한계
+
+                                1. 바이너리 데이터를 보낼 수 없다(text이기 때문이다)
+                                        -text 일반 텍스트 편집기로 편집가능한 포맷
+                                        예) txt.rtf,html,cdd,js,xhtml.. ..
+                                2. binary
+                                -byte단위로 포맷 
+                                -일반텍스트로 편집 불가 
+                                -전용 app 사용
+                                예) jpg,mp3,mp4
+
+
+
+
+        
